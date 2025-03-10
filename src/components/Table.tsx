@@ -35,7 +35,7 @@ function Table({ data, searchTerm }: TableProps) {
                 <Link to={`/user/${object.id}`} className='read'>
                   <span>Details</span>
                 </Link>
-                <Link to="/edit" className='read' style={{ marginLeft: 15 }}>
+                <Link to={`/edit/${object.id}`} className='read' style={{ marginLeft: 15 }}>
                   <span>Edit</span>
                 </Link>
               </td>

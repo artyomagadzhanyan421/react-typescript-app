@@ -1,5 +1,7 @@
 .Home,
-.User {
+.User, 
+.Edit, 
+.Add {
     background: #111827;
     min-height: 100vh;
     padding: 80px 50px;
@@ -52,6 +54,14 @@ table th {
     }
 }
 
+.read.delete {
+    background: #DC2626;
+
+    &:hover {
+        background-color: #B91C1C;
+    }
+}
+
 .Search {
     display: flex;
     align-items: center;
@@ -67,8 +77,46 @@ table th {
     outline: none;
     width: 100%;
     box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1);
-    padding: 16px;
+    padding: 15.5px;
     font-size: 15px;
     font-weight: 500;
     border-radius: 10px;
+}
+
+form {
+    background-color: #1F2937;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.1);
+    gap: 15px;
+    max-width: 500px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+form h2 {
+    margin-bottom: 10px;
+}
+
+form input, 
+form button {
+    color: white;
+    border: none;
+    outline: none;
+    background: #374151;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+form button {
+    cursor: pointer;
+    width: fit-content;
 }

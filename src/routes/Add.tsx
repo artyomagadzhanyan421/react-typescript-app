@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
+import { SyntheticEvent } from "react";
 
 function Add() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ function Add() {
   // Disable
   const [disable, setDisbale] = useState(false);
 
-  const addFunc = (e) => {
+  const addFunc = (e: SyntheticEvent) => {
     e.preventDefault();
 
     setDisbale(true);

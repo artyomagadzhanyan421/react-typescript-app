@@ -1,5 +1,6 @@
 import { useParams, useNavigate } from "react-router";
 import { useState, useEffect } from "react";
+import { SyntheticEvent } from "react";
 
 // Hooks
 import useFetch from "../hooks/useFetch";
@@ -33,7 +34,7 @@ function Edit() {
     }
   }, [user]);
 
-  const editFunc = (e) => {
+  const editFunc = (e: SyntheticEvent) => {
     e.preventDefault();
 
     setEdit(true);

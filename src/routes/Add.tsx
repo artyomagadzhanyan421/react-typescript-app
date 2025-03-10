@@ -7,6 +7,8 @@ const baseUrl = import.meta.env.VITE_API_BASE_URL;
 function Add() {
   const navigate = useNavigate();
 
+  document.title = "Create user";
+
   // Values
   const [name, setName] = useState('');
   const [username, setUsername] = useState('');

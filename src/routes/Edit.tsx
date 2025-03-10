@@ -95,10 +95,10 @@ function Edit() {
           <input type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
           <input type="text" placeholder="Website" value={website} onChange={(e) => setWebsite(e.target.value)} required />
           <div className="buttons">
-            <button className="read">
+            <button className="read" disabled={edit}>
               <span>{edit ? "Editing..." : "Edit"}</span>
             </button>
-            <button type="button" onClick={deleteFunc} className="read delete">
+            <button type="button" onClick={deleteFunc} className="read delete" disabled={trash}>
               <span>{trash ? "Trashing..." : "Trash"}</span>
             </button>
           </div>

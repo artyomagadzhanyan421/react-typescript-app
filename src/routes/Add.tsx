@@ -40,7 +40,7 @@ function Add() {
         <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
         <input type="text" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} required />
         <input type="text" placeholder="Website" value={website} onChange={(e) => setWebsite(e.target.value)} required />
-        <button type="submit" className="read">
+        <button type="submit" className="read" disabled={disable}>
           <span>{disable ? "Adding.." : "Add"}</span>
         </button>
       </form>

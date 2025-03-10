@@ -4,6 +4,7 @@
 * TypeScript integration for types checking
 * Reusable componenets
 * Passing states with prop
+* Search filter functionality
 * API integration (Node.js and MongoDB)
 * React Router for navigation
 

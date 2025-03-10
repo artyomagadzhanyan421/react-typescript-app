@@ -27,15 +27,15 @@ function Table({ data, searchTerm }: TableProps) {
       <tbody>
         {filteredData.length > 0 ? (
           filteredData.map((object) => (
-            <tr key={object.id}>
+            <tr key={object._id}>
               <td>{object.name}</td>
               <td>{object.username}</td>
               <td>{object.email}</td>
               <td>
-                <Link to={`/user/${object.id}`} className='read'>
+                <Link to={`/user/${object._id}`} className='read'>
                   <span>Details</span>
                 </Link>
-                <Link to={`/edit/${object.id}`} className='read' style={{ marginLeft: 15 }}>
+                <Link to={`/edit/${object._id}`} className='read' style={{ marginLeft: 15 }}>
                   <span>Edit</span>
                 </Link>
               </td>

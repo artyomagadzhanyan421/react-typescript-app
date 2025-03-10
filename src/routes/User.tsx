@@ -9,7 +9,7 @@ import useFetch from "../hooks/useFetch";
 function User() {
   const { id } = useParams<{ id: string }>();
 
-  const { data: user, loading, error } = useFetch<TypeUser>(`http://localhost:3000/users/${id}`);
+  const { data: user, loading, error } = useFetch<TypeUser>(`https://react-typescript-api-orcin.vercel.app/users/${id}`);
 
   const screen = {
     background: "#111827",

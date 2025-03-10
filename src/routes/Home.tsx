@@ -5,7 +5,7 @@ import Search from "../components/Search";
 import { TypeUser } from "../types/User";
 
 function Home() {
-  const { data, loading, error } = useFetch<TypeUser[]>("http://localhost:3000/users");
+  const { data, loading, error } = useFetch<TypeUser[]>("https://react-typescript-api-orcin.vercel.app/users");
   const [searchTerm, setSearchTerm] = useState("");
 
   const screen = {

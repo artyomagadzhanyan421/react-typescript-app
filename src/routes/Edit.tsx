@@ -12,7 +12,7 @@ function Edit() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { data: user, loading, error } = useFetch<TypeUser>(`http://localhost:3000/users/${id}`);
+  const { data: user, loading, error } = useFetch<TypeUser>(`https://react-typescript-api-orcin.vercel.app/users/${id}`);
 
   // Values
   const [name, setName] = useState('');
@@ -41,7 +41,7 @@ function Edit() {
 
     const userEdit = { name, username, email, phone, website }
 
-    fetch(`http://localhost:3000/users/${id}`, {
+    fetch(`https://react-typescript-api-orcin.vercel.app/users/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(userEdit)
@@ -53,7 +53,7 @@ function Edit() {
   const deleteFunc = () => {
     setTrash(true);
 
-    fetch(`http://localhost:3000/users/${id}`, {
+    fetch(`https://react-typescript-api-orcin.vercel.app/users/${id}`, {
       method: "DELETE"
     }).then(() => {
       navigate(-1);
@@ -98,7 +98,7 @@ function Edit() {
             <button className="read">
               <span>{edit ? "Editing..." : "Edit"}</span>
             </button>
-            <button onClick={deleteFunc} className="read delete">
+            <button type="button" onClick={deleteFunc} className="read delete">
               <span>{trash ? "Trashing..." : "Trash"}</span>
             </button>
           </div>

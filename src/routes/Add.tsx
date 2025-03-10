@@ -22,7 +22,7 @@ function Add() {
 
     const user = { name, username, email, phone, website };
 
-    fetch("http://localhost:3000/users", {
+    fetch("https://react-typescript-api-orcin.vercel.app/users", {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(user)

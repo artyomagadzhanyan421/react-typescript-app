@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router';
 import Home from './routes/Home';
 import User from './routes/User';
 import Edit from './routes/Edit';
+import Add from './routes/Add';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/user/:id" element={<User />} />
         <Route path="/edit" element={<Edit />} />
+        <Route path="/add" element={<Add />} />
       </Routes>
     </div>
   )

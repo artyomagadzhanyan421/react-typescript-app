@@ -8,11 +8,13 @@ import useFetch from "../hooks/useFetch";
 // Types
 import { TypeUser } from "../types/User";
 
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
 function Edit() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const { data: user, loading, error } = useFetch<TypeUser>(`https://react-typescript-api-orcin.vercel.app/users/${id}`);
+  const { data: user, loading, error } = useFetch<TypeUser>(`${baseUrl}/${id}`);
 
   // Values
   const [name, setName] = useState('');
@@ -41,7 +43,7 @@ function Edit() {
 
     const userEdit = { name, username, email, phone, website }
 
-    fetch(`https://react-typescript-api-orcin.vercel.app/users/${id}`, {
+    fetch(`${baseUrl}/${id}`, {
       method: "PUT",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(userEdit)
@@ -53,7 +55,7 @@ function Edit() {
   const deleteFunc = () => {
     setTrash(true);
 
-    fetch(`https://react-typescript-api-orcin.vercel.app/users/${id}`, {
+    fetch(`${baseUrl}/${id}`, {
       method: "DELETE"
     }).then(() => {
       navigate(-1);

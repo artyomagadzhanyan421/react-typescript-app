@@ -4,8 +4,10 @@ import Table from "../components/Table";
 import Search from "../components/Search";
 import { TypeUser } from "../types/User";
 
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
 function Home() {
-  const { data, loading, error } = useFetch<TypeUser[]>("https://react-typescript-api-orcin.vercel.app/users");
+  const { data, loading, error } = useFetch<TypeUser[]>(`${baseUrl}`);
   const [searchTerm, setSearchTerm] = useState("");
 
   const screen = {

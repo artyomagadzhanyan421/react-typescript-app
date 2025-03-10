@@ -6,10 +6,12 @@ import { TypeUser } from "../types/User";
 // Hooks
 import useFetch from "../hooks/useFetch";
 
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
 function User() {
   const { id } = useParams<{ id: string }>();
 
-  const { data: user, loading, error } = useFetch<TypeUser>(`https://react-typescript-api-orcin.vercel.app/users/${id}`);
+  const { data: user, loading, error } = useFetch<TypeUser>(`${baseUrl}/${id}`);
 
   const screen = {
     background: "#111827",

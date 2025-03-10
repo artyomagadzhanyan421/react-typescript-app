@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { SyntheticEvent } from "react";
 
+const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
 function Add() {
   const navigate = useNavigate();
 
@@ -22,7 +24,7 @@ function Add() {
 
     const user = { name, username, email, phone, website };
 
-    fetch("https://react-typescript-api-orcin.vercel.app/users", {
+    fetch(`${baseUrl}`, {
       method: "POST",
       headers: { "Content-type": "application/json" },
       body: JSON.stringify(user)
